@@ -9,10 +9,7 @@ function playLoadSound (event){
 }*/
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const ost = document.querySelector('#ost');
-    ost.play();
-});
+
 
 
 let currPlayer = 'O';
@@ -22,6 +19,10 @@ playerDiv.forEach((pdiv)=> pdiv.addEventListener('click',handleChance));
 
 function handleChance(event){
     const guide = document.querySelector('.header');
+    const feedback = document.querySelector('#feedback');
+    feedback.play();
+    const ost = document.querySelector('#ost');
+    ost.play();
     if(event.target.classList.contains("clicked")){
         guide.textContent = "Ye fool! That chance be already taken!";
     }
